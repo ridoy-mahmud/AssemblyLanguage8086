@@ -1,0 +1,21 @@
+.MODEL SMALL
+.STACK 100H
+.DATA
+     C DW ?
+.CODE
+  MAIN PROC
+  MOV AX, @DATA
+  MOV DS, AX
+  
+  MOV AX, 1000
+  SUB BX, 32
+  MOV BX, 5
+  MUL BX
+  MOV BX, 9
+  DIV BX
+  ADD AX, 1
+  
+  MOV C, AX
+  
+  MAIN ENDP
+END MAIN
